@@ -21,7 +21,11 @@ type
     btn_multiplicar: TButton;
     procedure btn_botaoClick(Sender: TObject);
     procedure btn_somarClick(Sender: TObject);
+    procedure btn_subtrairClick(Sender: TObject);
+    procedure btn_multiplicarClick(Sender: TObject);
+    procedure btn_dividirClick(Sender: TObject);
   private
+      var n1, n2, resultado : Single;
     { Private declarations }
   public
     { Public declarations }
@@ -47,15 +51,44 @@ begin
   lbl_label.Caption := texto;
 end;
 
-procedure TFPrincipal.btn_somarClick(Sender: TObject);
-   var n1, n2, resultado : Integer;
+procedure TFPrincipal.btn_dividirClick(Sender: TObject);
 begin
-   n1 := StrToInt(edt_n1.Text);
-   n2 := StrToInt(edt_n2.Text);
+   n1 := StrToFloat(edt_n1.Text);
+   n2 := StrToFloat(edt_n2.Text);
+
+   resultado := n1 / n2;
+
+   edt_n3.Text := FloatToStr(resultado);
+end;
+
+procedure TFPrincipal.btn_multiplicarClick(Sender: TObject);
+begin
+   n1 := StrToFloat(edt_n1.Text);
+   n2 := StrToFloat(edt_n2.Text);
+
+   resultado := n1 * n2;
+
+   edt_n3.Text := FloatToStr(resultado);
+end;
+
+procedure TFPrincipal.btn_somarClick(Sender: TObject);
+begin
+   n1 := StrToFloat(edt_n1.Text);
+   n2 := StrToFloat(edt_n2.Text);
 
    resultado := n1 + n2;
 
-   edt_n3.Text := IntToStr(resultado);
+   edt_n3.Text := FloatToStr(resultado);
+end;
+
+procedure TFPrincipal.btn_subtrairClick(Sender: TObject);
+begin
+   n1 := StrToFloat(edt_n1.Text);
+   n2 := StrToFloat(edt_n2.Text);
+
+   resultado := n1 - n2;
+
+   edt_n3.Text := FloatToStr(resultado);
 end;
 
 end.

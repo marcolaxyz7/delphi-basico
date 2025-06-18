@@ -36,20 +36,20 @@ object FPrincipal: TFPrincipal
   end
   object pnl_calculadora: TPanel
     Left = 600
-    Top = 16
+    Top = 24
     Width = 305
     Height = 401
     TabOrder = 2
     object edt_n1: TEdit
       Left = 16
-      Top = 32
+      Top = 24
       Width = 273
       Height = 38
       TabOrder = 0
     end
     object edt_n2: TEdit
       Left = 16
-      Top = 182
+      Top = 94
       Width = 273
       Height = 38
       TabOrder = 1
@@ -63,7 +63,7 @@ object FPrincipal: TFPrincipal
     end
     object btn_somar: TButton
       Left = 16
-      Top = 264
+      Top = 160
       Width = 41
       Height = 41
       Caption = '+'
@@ -71,28 +71,31 @@ object FPrincipal: TFPrincipal
       OnClick = btn_somarClick
     end
     object btn_subtrair: TButton
-      Left = 96
-      Top = 264
+      Left = 93
+      Top = 160
       Width = 41
       Height = 41
       Caption = '-'
       TabOrder = 4
+      OnClick = btn_subtrairClick
     end
     object btn_dividir: TButton
-      Left = 176
-      Top = 264
+      Left = 247
+      Top = 160
       Width = 41
       Height = 41
       Caption = '/'
       TabOrder = 5
+      OnClick = btn_dividirClick
     end
     object btn_multiplicar: TButton
-      Left = 248
-      Top = 264
+      Left = 170
+      Top = 160
       Width = 41
       Height = 41
       Caption = 'x'
       TabOrder = 6
+      OnClick = btn_multiplicarClick
     end
   end
 end
